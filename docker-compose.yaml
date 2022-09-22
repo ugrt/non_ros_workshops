@@ -7,6 +7,6 @@ services:
       context: .
       dockerfile: dockerfile
     ports:
-      - 10000:8888
-      - 2022:22
+      - 8888
+      - 22
     

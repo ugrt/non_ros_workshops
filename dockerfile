@@ -1,4 +1,4 @@
-FROM ubuntu:22.04
+FROM ros:humble-ros-base-jammy
 
 RUN useradd -ms /bin/bash ugrt-tutorial
 
@@ -34,5 +34,6 @@ COPY startup.sh /startup.sh
 RUN chmod 777 /startup.sh
 USER ugrt-tutorial
 WORKDIR /home/ugrt-tutorial
+COPY ./Python /home/ugrt-tutorial/Python
 
 CMD ["/startup.sh"]
